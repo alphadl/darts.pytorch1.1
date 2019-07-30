@@ -1,7 +1,7 @@
 # darts.pytorch1.1
 Implementation with latest PyTorch for multi-gpu DARTS https://arxiv.org/abs/1806.09055
 
-Note that this is not the official code.
+🚩 Note that this is not the official code, please refer https://github.com/quark0/darts for more details.
   
 
 # Differentiable Architecture Search
