@@ -1,0 +1,166 @@
+2019-07-30 22:09:27,659 gpu device = 0,1
+2019-07-30 22:09:27,659 args = Namespace(alpha=0, arch_lr=0.003, arch_wdecay=0.001, batch_size=256, beta=0.001, bptt=35, clip=0.25, continue_train=False, data='../data/penn/', dropout=0.75, dropoute=0, dropouth=0.25, dropouti=0.2, dropoutx=0.75, emsize=300, epochs=50, gpu='0,1', log_interval=50, lr=20, max_seq_len_delta=20, nhid=300, nhidlast=300, nonmono=5, save='search-EXP-20190730-220927', seed=3, small_batch_size=256, unrolled=False, wdecay=5e-07)
+2019-07-30 22:09:36,993 param size: 4810000
+2019-07-30 22:09:36,993 initial genotype:
+2019-07-30 22:09:36,993 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:09:36,999 Args: Namespace(alpha=0, arch_lr=0.003, arch_wdecay=0.001, batch_size=256, beta=0.001, bptt=35, clip=0.25, continue_train=False, data='../data/penn/', dropout=0.75, dropoute=0, dropouth=0.25, dropouti=0.2, dropoutx=0.75, emsize=300, epochs=50, gpu='0,1', log_interval=50, lr=20, max_seq_len_delta=20, nhid=300, nhidlast=300, nonmono=5, save='search-EXP-20190730-220927', seed=3, small_batch_size=256, unrolled=False, wdecay=5e-07)
+2019-07-30 22:09:36,999 Model total parameters: 4810000
+2019-07-30 22:10:10,301 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:10:10,308 | epoch   1 |    50/  103 batches | lr 20.00 | ms/batch 666.19 | loss  9.70 | ppl 16239.94
+2019-07-30 22:10:42,058 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:10:42,063 | epoch   1 |   100/  103 batches | lr 20.00 | ms/batch 635.10 | loss  9.29 | ppl 10782.52
+2019-07-30 22:11:09,747 -----------------------------------------------------------------------------------------
+2019-07-30 22:11:09,747 | end of epoch   1 | time: 92.75s | valid loss  8.80 | valid ppl  6612.11
+2019-07-30 22:11:09,747 -----------------------------------------------------------------------------------------
+2019-07-30 22:11:09,776 Saving Normal!
+2019-07-30 22:11:41,435 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:11:41,439 | epoch   2 |    50/  103 batches | lr 20.00 | ms/batch 633.26 | loss  9.08 | ppl  8818.87
+2019-07-30 22:12:13,550 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:12:13,558 | epoch   2 |   100/  103 batches | lr 20.00 | ms/batch 642.39 | loss  8.66 | ppl  5764.88
+2019-07-30 22:12:42,316 -----------------------------------------------------------------------------------------
+2019-07-30 22:12:42,316 | end of epoch   2 | time: 92.54s | valid loss  7.64 | valid ppl  2071.25
+2019-07-30 22:12:42,316 -----------------------------------------------------------------------------------------
+2019-07-30 22:12:42,353 Saving Normal!
+2019-07-30 22:13:14,667 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:13:14,672 | epoch   3 |    50/  103 batches | lr 20.00 | ms/batch 646.37 | loss  8.61 | ppl  5500.75
+2019-07-30 22:13:47,079 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:13:47,088 | epoch   3 |   100/  103 batches | lr 20.00 | ms/batch 648.31 | loss  8.25 | ppl  3832.99
+2019-07-30 22:14:14,285 -----------------------------------------------------------------------------------------
+2019-07-30 22:14:14,285 | end of epoch   3 | time: 91.93s | valid loss  7.32 | valid ppl  1506.01
+2019-07-30 22:14:14,285 -----------------------------------------------------------------------------------------
+2019-07-30 22:14:14,317 Saving Normal!
+2019-07-30 22:14:48,591 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:14:48,598 | epoch   4 |    50/  103 batches | lr 20.00 | ms/batch 685.62 | loss  8.43 | ppl  4565.84
+2019-07-30 22:15:21,672 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:15:21,680 | epoch   4 |   100/  103 batches | lr 20.00 | ms/batch 661.63 | loss  8.12 | ppl  3370.12
+2019-07-30 22:15:48,749 -----------------------------------------------------------------------------------------
+2019-07-30 22:15:48,749 | end of epoch   4 | time: 94.43s | valid loss  7.12 | valid ppl  1242.18
+2019-07-30 22:15:48,749 -----------------------------------------------------------------------------------------
+2019-07-30 22:15:48,784 Saving Normal!
+2019-07-30 22:16:19,499 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:16:19,506 | epoch   5 |    50/  103 batches | lr 20.00 | ms/batch 614.44 | loss  8.22 | ppl  3710.51
+2019-07-30 22:16:50,476 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:16:50,481 | epoch   5 |   100/  103 batches | lr 20.00 | ms/batch 619.49 | loss  8.01 | ppl  3012.88
+2019-07-30 22:17:17,945 -----------------------------------------------------------------------------------------
+2019-07-30 22:17:17,945 | end of epoch   5 | time: 89.16s | valid loss  7.05 | valid ppl  1147.14
+2019-07-30 22:17:17,945 -----------------------------------------------------------------------------------------
+2019-07-30 22:17:17,984 Saving Normal!
+2019-07-30 22:17:48,587 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:17:48,592 | epoch   6 |    50/  103 batches | lr 20.00 | ms/batch 612.15 | loss  8.16 | ppl  3491.27
+2019-07-30 22:18:18,463 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:18:18,467 | epoch   6 |   100/  103 batches | lr 20.00 | ms/batch 597.52 | loss  7.86 | ppl  2598.66
+2019-07-30 22:18:46,123 -----------------------------------------------------------------------------------------
+2019-07-30 22:18:46,123 | end of epoch   6 | time: 88.14s | valid loss  6.96 | valid ppl  1055.21
+2019-07-30 22:18:46,123 -----------------------------------------------------------------------------------------
+2019-07-30 22:18:46,158 Saving Normal!
+2019-07-30 22:19:18,028 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:19:18,036 | epoch   7 |    50/  103 batches | lr 20.00 | ms/batch 637.55 | loss  7.97 | ppl  2898.51
+2019-07-30 22:19:48,065 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:19:48,070 | epoch   7 |   100/  103 batches | lr 20.00 | ms/batch 600.68 | loss  7.74 | ppl  2305.81
+2019-07-30 22:20:14,554 -----------------------------------------------------------------------------------------
+2019-07-30 22:20:14,554 | end of epoch   7 | time: 88.40s | valid loss  6.89 | valid ppl   978.99
+2019-07-30 22:20:14,554 -----------------------------------------------------------------------------------------
+2019-07-30 22:20:14,590 Saving Normal!
+2019-07-30 22:20:45,758 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:20:45,763 | epoch   8 |    50/  103 batches | lr 20.00 | ms/batch 623.45 | loss  7.89 | ppl  2671.25
+2019-07-30 22:21:15,507 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:21:15,512 | epoch   8 |   100/  103 batches | lr 20.00 | ms/batch 594.98 | loss  7.62 | ppl  2040.37
+2019-07-30 22:21:43,239 -----------------------------------------------------------------------------------------
+2019-07-30 22:21:43,239 | end of epoch   8 | time: 88.65s | valid loss  6.86 | valid ppl   957.45
+2019-07-30 22:21:43,240 -----------------------------------------------------------------------------------------
+2019-07-30 22:21:43,267 Saving Normal!
+2019-07-30 22:22:17,233 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:22:17,239 | epoch   9 |    50/  103 batches | lr 20.00 | ms/batch 679.43 | loss  7.69 | ppl  2179.87
+2019-07-30 22:22:50,237 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:22:50,246 | epoch   9 |   100/  103 batches | lr 20.00 | ms/batch 660.14 | loss  7.38 | ppl  1598.00
+2019-07-30 22:23:20,031 -----------------------------------------------------------------------------------------
+2019-07-30 22:23:20,031 | end of epoch   9 | time: 96.76s | valid loss  6.82 | valid ppl   919.74
+2019-07-30 22:23:20,031 -----------------------------------------------------------------------------------------
+2019-07-30 22:23:20,068 Saving Normal!
+2019-07-30 22:23:51,332 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:23:51,340 | epoch  10 |    50/  103 batches | lr 20.00 | ms/batch 625.44 | loss  7.55 | ppl  1899.22
+2019-07-30 22:24:21,092 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:24:21,097 | epoch  10 |   100/  103 batches | lr 20.00 | ms/batch 595.14 | loss  7.34 | ppl  1537.17
+2019-07-30 22:24:49,052 -----------------------------------------------------------------------------------------
+2019-07-30 22:24:49,052 | end of epoch  10 | time: 88.98s | valid loss  6.76 | valid ppl   862.11
+2019-07-30 22:24:49,052 -----------------------------------------------------------------------------------------
+2019-07-30 22:24:49,087 Saving Normal!
+2019-07-30 22:25:20,449 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:25:20,454 | epoch  11 |    50/  103 batches | lr 20.00 | ms/batch 627.34 | loss  7.32 | ppl  1509.32
+2019-07-30 22:25:51,220 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:25:51,225 | epoch  11 |   100/  103 batches | lr 20.00 | ms/batch 615.41 | loss  7.07 | ppl  1179.08
+2019-07-30 22:26:19,470 -----------------------------------------------------------------------------------------
+2019-07-30 22:26:19,470 | end of epoch  11 | time: 90.38s | valid loss  6.72 | valid ppl   826.84
+2019-07-30 22:26:19,470 -----------------------------------------------------------------------------------------
+2019-07-30 22:26:19,507 Saving Normal!
+2019-07-30 22:26:49,105 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:26:49,109 | epoch  12 |    50/  103 batches | lr 20.00 | ms/batch 592.04 | loss  7.11 | ppl  1227.92
+2019-07-30 22:27:20,381 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:27:20,386 | epoch  12 |   100/  103 batches | lr 20.00 | ms/batch 625.53 | loss  6.82 | ppl   912.96
+2019-07-30 22:27:50,057 -----------------------------------------------------------------------------------------
+2019-07-30 22:27:50,057 | end of epoch  12 | time: 90.55s | valid loss  6.68 | valid ppl   800.28
+2019-07-30 22:27:50,057 -----------------------------------------------------------------------------------------
+2019-07-30 22:27:50,094 Saving Normal!
+2019-07-30 22:28:20,557 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:28:20,562 | epoch  13 |    50/  103 batches | lr 20.00 | ms/batch 609.37 | loss  6.87 | ppl   962.08
+2019-07-30 22:28:51,918 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:28:51,926 | epoch  13 |   100/  103 batches | lr 20.00 | ms/batch 627.26 | loss  6.65 | ppl   776.21
+2019-07-30 22:29:21,643 -----------------------------------------------------------------------------------------
+2019-07-30 22:29:21,643 | end of epoch  13 | time: 91.55s | valid loss  6.68 | valid ppl   797.49
+2019-07-30 22:29:21,643 -----------------------------------------------------------------------------------------
+2019-07-30 22:29:21,681 Saving Normal!
+2019-07-30 22:29:53,280 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:29:53,288 | epoch  14 |    50/  103 batches | lr 20.00 | ms/batch 632.14 | loss  6.68 | ppl   795.76
+2019-07-30 22:30:26,223 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:30:26,230 | epoch  14 |   100/  103 batches | lr 20.00 | ms/batch 658.84 | loss  6.48 | ppl   651.65
+2019-07-30 22:30:54,116 -----------------------------------------------------------------------------------------
+2019-07-30 22:30:54,116 | end of epoch  14 | time: 92.43s | valid loss  6.66 | valid ppl   778.36
+2019-07-30 22:30:54,116 -----------------------------------------------------------------------------------------
+2019-07-30 22:30:54,153 Saving Normal!
+2019-07-30 22:31:26,598 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:31:26,605 | epoch  15 |    50/  103 batches | lr 20.00 | ms/batch 649.05 | loss  6.53 | ppl   683.78
+2019-07-30 22:31:58,608 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:31:58,615 | epoch  15 |   100/  103 batches | lr 20.00 | ms/batch 640.20 | loss  6.30 | ppl   542.59
+2019-07-30 22:32:27,316 -----------------------------------------------------------------------------------------
+2019-07-30 22:32:27,316 | end of epoch  15 | time: 93.16s | valid loss  6.64 | valid ppl   763.19
+2019-07-30 22:32:27,316 -----------------------------------------------------------------------------------------
+2019-07-30 22:32:27,353 Saving Normal!
+2019-07-30 22:33:00,006 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:33:00,013 | epoch  16 |    50/  103 batches | lr 20.00 | ms/batch 653.19 | loss  6.37 | ppl   586.56
+2019-07-30 22:33:31,196 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:33:31,201 | epoch  16 |   100/  103 batches | lr 20.00 | ms/batch 623.76 | loss  6.16 | ppl   473.94
+2019-07-30 22:33:58,207 -----------------------------------------------------------------------------------------
+2019-07-30 22:33:58,207 | end of epoch  16 | time: 90.85s | valid loss  6.59 | valid ppl   730.98
+2019-07-30 22:33:58,207 -----------------------------------------------------------------------------------------
+2019-07-30 22:33:58,244 Saving Normal!
+2019-07-30 22:34:30,919 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:34:30,925 | epoch  17 |    50/  103 batches | lr 20.00 | ms/batch 653.63 | loss  6.23 | ppl   509.42
+2019-07-30 22:35:04,099 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:35:04,107 | epoch  17 |   100/  103 batches | lr 20.00 | ms/batch 663.64 | loss  6.05 | ppl   426.03
+2019-07-30 22:35:32,773 -----------------------------------------------------------------------------------------
+2019-07-30 22:35:32,773 | end of epoch  17 | time: 94.53s | valid loss  6.60 | valid ppl   731.57
+2019-07-30 22:35:32,773 -----------------------------------------------------------------------------------------
+2019-07-30 22:36:03,906 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:36:03,911 | epoch  18 |    50/  103 batches | lr 20.00 | ms/batch 622.76 | loss  6.13 | ppl   457.90
+2019-07-30 22:36:33,592 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:36:33,597 | epoch  18 |   100/  103 batches | lr 20.00 | ms/batch 593.72 | loss  5.94 | ppl   378.94
+2019-07-30 22:37:01,583 -----------------------------------------------------------------------------------------
+2019-07-30 22:37:01,583 | end of epoch  18 | time: 88.81s | valid loss  6.59 | valid ppl   726.26
+2019-07-30 22:37:01,583 -----------------------------------------------------------------------------------------
+2019-07-30 22:37:01,618 Saving Normal!
+2019-07-30 22:37:34,216 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:37:34,224 | epoch  19 |    50/  103 batches | lr 20.00 | ms/batch 652.12 | loss  6.02 | ppl   411.91
+2019-07-30 22:38:05,598 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:38:05,606 | epoch  19 |   100/  103 batches | lr 20.00 | ms/batch 627.63 | loss  5.84 | ppl   344.85
+2019-07-30 22:38:33,179 -----------------------------------------------------------------------------------------
+2019-07-30 22:38:33,179 | end of epoch  19 | time: 91.56s | valid loss  6.58 | valid ppl   719.82
+2019-07-30 22:38:33,179 -----------------------------------------------------------------------------------------
+2019-07-30 22:38:33,215 Saving Normal!
+2019-07-30 22:39:06,074 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:39:06,079 | epoch  20 |    50/  103 batches | lr 20.00 | ms/batch 657.27 | loss  5.93 | ppl   377.93
+2019-07-30 22:39:38,166 Genotype(recurrent=[('identity', 0), ('relu', 1), ('identity', 0), ('identity', 2), ('sigmoid', 4), ('tanh', 0), ('sigmoid', 1), ('identity', 6)], concat=range(1, 9))
+2019-07-30 22:39:38,174 | epoch  20 |   100/  103 batches | lr 20.00 | ms/batch 641.90 | loss  5.77 | ppl   320.59
+2019-07-30 22:40:06,552 -----------------------------------------------------------------------------------------
+2019-07-30 22:40:06,552 | end of epoch  20 | time: 93.34s | valid loss  6.57 | valid ppl   714.63
+2019-07-30 22:40:06,552 -----------------------------------------------------------------------------------------
+2019-07-30 22:40:06,587 Saving Normal!
