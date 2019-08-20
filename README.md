@@ -20,7 +20,7 @@ The algorithm is based on continuous relaxation and gradient descent in the arch
 
 ## Requirements
 ```
-Python == 3.5.5, PyTorch == 1.1
+Python >= 3.5.5, PyTorch == 1.1
 ```
 NOTE: The latest PyTorch 1.1 is supported at this version.
 
