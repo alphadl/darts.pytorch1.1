@@ -8,7 +8,6 @@ class Cell(nn.Module):
 
   def __init__(self, genotype, C_prev_prev, C_prev, C, reduction, reduction_prev):
     super(Cell, self).__init__()
-    print(C_prev_prev, C_prev, C)
 
     if reduction_prev:
       self.preprocess0 = FactorizedReduce(C_prev_prev, C)
@@ -88,6 +87,7 @@ class NetworkCIFAR(nn.Module):
     super(NetworkCIFAR, self).__init__()
     self._layers = layers
     self._auxiliary = auxiliary
+    self.drop_path_prob = 0.0
 
     stem_multiplier = 3
     C_curr = stem_multiplier*C

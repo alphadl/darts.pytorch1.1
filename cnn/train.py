@@ -74,10 +74,9 @@ def main():
   model = Network(args.init_channels, CIFAR_CLASSES, args.layers, args.auxiliary, genotype)
   model = model.cuda()
 
-  if len(gpus)>1:
-    print("True")
+  if len(gpus) > 1:
+    logging.info('Using DataParallel on GPUs %s', args.gpu)
     model = nn.parallel.DataParallel(model, device_ids=gpus, output_device=gpus[0])
-    model = model.module
 
   logging.info("param size = %fMB", utils.count_parameters_in_MB(model))
 
@@ -107,7 +106,8 @@ def main():
   for epoch in range(args.epochs):
     scheduler.step()
     logging.info('epoch %d lr %e', epoch, scheduler.get_lr()[0])
-    model.drop_path_prob = args.drop_path_prob * epoch / args.epochs
+    _model = model.module if hasattr(model, 'module') else model
+    _model.drop_path_prob = args.drop_path_prob * epoch / args.epochs
 
     train_acc, train_obj = train(train_queue, model, criterion, optimizer)
     logging.info('train_acc %f', train_acc)

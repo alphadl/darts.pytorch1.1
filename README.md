@@ -48,6 +48,9 @@ To carry out architecture search using 2nd-order approximation, run
 cd cnn && python train_search.py --gpu 0,1    # for conv cells on CIFAR-10
 cd rnn && python train_search.py --gpu 0,1    # for recurrent cells on PTB
 ```
+
+**Recent change**: CNN search and evaluation now support multi-GPU data parallelism (e.g. `--gpu 0,1,2,3`); RNN remains single-GPU.
+
 Note the _validation performance in this step does not indicate the final performance of the architecture_. One must train the obtained genotype/architecture from scratch using full-sized models, as described in the next section.
 
 Also be aware that different runs would end up with different local minimum. To get the best result, it is crucial to repeat the search process with different seeds and select the best cell(s) based on validation performance (obtained by training the derived cell from scratch for a small number of epochs). Please refer to fig. 3 and sect. 3.2 in our arXiv paper.

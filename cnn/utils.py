@@ -91,7 +91,9 @@ def save_checkpoint(state, is_best, save):
 
 
 def save(model, model_path):
-  torch.save(model.state_dict(), model_path)
+  # When using DataParallel, save inner module state_dict so test/single-GPU load has no 'module.' prefix
+  state_dict = model.module.state_dict() if hasattr(model, 'module') else model.state_dict()
+  torch.save(state_dict, model_path)
 
 
 def load(model, model_path):

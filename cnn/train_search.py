@@ -77,10 +77,9 @@ def main():
   criterion = criterion.cuda()
   model = Network(args.init_channels, CIFAR_CLASSES, args.layers, criterion)
   model = model.cuda()
-  if len(gpus)>1:
-    print("True")
+  if len(gpus) > 1:
+    logging.info('Using DataParallel on GPUs %s', args.gpu)
     model = nn.parallel.DataParallel(model, device_ids=gpus, output_device=gpus[0])
-    model = model.module
 
   arch_params = list(map(id, model.arch_parameters()))
   weight_params = filter(lambda p: id(p) not in arch_params,
@@ -123,11 +122,13 @@ def main():
     lr = scheduler.get_lr()[0]
     logging.info('epoch %d lr %e', epoch, lr)
 
-    genotype = model.genotype()
+    # DataParallel forwards to module; when single-GPU, model is the net itself
+    _model = model.module if hasattr(model, 'module') else model
+    genotype = _model.genotype()
     logging.info('genotype = %s', genotype)
 
-    print(F.softmax(model.alphas_normal, dim=-1))
-    print(F.softmax(model.alphas_reduce, dim=-1))
+    print(F.softmax(_model.alphas_normal, dim=-1))
+    print(F.softmax(_model.alphas_reduce, dim=-1))
 
     # training
     train_acc, train_obj = train(train_queue, valid_queue, model, architect, criterion, optimizer, lr)

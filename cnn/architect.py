@@ -17,7 +17,8 @@ class Architect(object):
     self.criterion = criterion
     self.optimizer = torch.optim.Adam(self.model.arch_parameters(),
         lr=args.arch_learning_rate, betas=(0.5, 0.999), weight_decay=args.arch_weight_decay)
-    self.optimizer = nn.DataParallel(self.optimizer, device_ids=[0,1])
+    device_ids = [int(i) for i in getattr(args, 'gpu', '0').split(',')]
+    self.optimizer = nn.DataParallel(self.optimizer, device_ids=device_ids)
 
   def _compute_unrolled_model(self, input, target, eta, network_optimizer):
     logits = self.model(input)
@@ -29,7 +30,8 @@ class Architect(object):
     except:
       moment = torch.zeros_like(theta)
     dtheta = _concat(torch.autograd.grad(loss, self.model.parameters())).detach() + self.network_weight_decay*theta
-    unrolled_model = self._construct_model_from_theta(theta.sub(eta, moment+dtheta))
+    # PyTorch 1.x: sub(other, alpha=scale) replaces 0.3's sub(scale, other)
+    unrolled_model = self._construct_model_from_theta(theta.sub(moment + dtheta, alpha=eta))
     return unrolled_model
 
   def step(self, input_train, target_train, input_valid, target_valid, eta, network_optimizer, unrolled):
@@ -58,7 +60,7 @@ class Architect(object):
     implicit_grads = self._hessian_vector_product(vector, input_train, target_train)
 
     for g, ig in zip(dalpha, implicit_grads):
-      g.data.sub_(eta, ig.data)
+      g.data.sub_(ig.data, alpha=eta)
 
     for v, g in zip(self.model.arch_parameters(), dalpha):
       if v.grad is None:
@@ -79,26 +81,26 @@ class Architect(object):
     assert offset == len(theta)
     model_dict.update(params)
     model_new.load_state_dict(model_dict)
-    return model_new.cuda()
+    return model_new.to(next(self.model.parameters()).device)
 
   def _hessian_vector_product(self, vector, input, target, r=1e-2):
     R = r / _concat(vector).norm()
     for p, v in zip(self.model.parameters(), vector):
-      p.data.add_(R, v)
+      p.data.add_(v, alpha=R)
     logits = self.model(input)
     loss = self.criterion(logits, target)
     # loss = self.model._loss(input, target)
     grads_p = torch.autograd.grad(loss, self.model.arch_parameters())
 
     for p, v in zip(self.model.parameters(), vector):
-      p.data.sub_(2*R, v)
+      p.data.sub_(v, alpha=2*R)
     logits = self.model(input)
     loss = self.criterion(logits, target)
     # loss = self.model._loss(input, target)
     grads_n = torch.autograd.grad(loss, self.model.arch_parameters())
 
     for p, v in zip(self.model.parameters(), vector):
-      p.data.add_(R, v)
+      p.data.add_(v, alpha=R)
 
     return [(x-y).div_(2*R) for x, y in zip(grads_p, grads_n)]
 
